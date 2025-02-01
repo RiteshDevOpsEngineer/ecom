@@ -32,10 +32,10 @@ type (
 	DB struct {
 		Connection string
 		Host       string
-		Port       string
 		User       string
-		Password   string
 		Name       string
+		Password   string
+		Port       string
 	}
 
 	HTTP struct {

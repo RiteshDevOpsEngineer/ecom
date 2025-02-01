@@ -19,7 +19,7 @@ DB_PASSWORD:
 DB_NAME: ecom
 
 # MongoDB settings
-MONGODB_CONNECTION_URI: mongodb://localhost:2017
+MONGODB_CONNECTION_URI: mongodb://localhost:27017
 
 JWT_SECRET_KEY: 3UWeyW_iLMaBkbTBtMu7YXguggWOLxq8zQTvCdeSKB4
 

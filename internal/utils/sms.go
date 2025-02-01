@@ -2,9 +2,9 @@
 package utils
 
 // func SendSMS(mobile string, message string) error {
-// 	userID := "2000232563"
-// 	password := "Rsplit%402023"
-// 	apiURL := "https://enterpriseapi.smsgupshup.com/GatewayAPI/rest"
+// 	userID := "xyz"
+// 	password := "xyz"
+// 	apiURL := "url"
 
 // 	encodedMessage := url.QueryEscape(message)
 // 	requestURL := fmt.Sprintf("%s?method=SendMessage&send_to=%s&msg=%s&msg_type=TEXT&userid=%s&auth_scheme=plain&password=%s&v=1.1&format=text",
