@@ -1,0 +1,32 @@
+package mongodb
+
+import (
+	"context"
+	"fmt"
+
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+type UserRepository struct {
+	Collection *mongo.Collection
+}
+
+func NewUserRepository(client *mongo.Client) *UserRepository {
+	db := client.Database("erspl")
+	collection := db.Collection("users")
+	return &UserRepository{Collection: collection}
+}
+
+func (r *UserRepository) Logout(ctx context.Context, phone string) error {
+
+	filter := bson.M{"phone": phone}
+	update := bson.M{"$unset": bson.M{"token": ""}}
+
+	_, err := r.Collection.UpdateOne(ctx, filter, update)
+	if err != nil {
+		return fmt.Errorf("failed to logout user: %v", err)
+	}
+
+	return nil
+}

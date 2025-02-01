@@ -1,0 +1,43 @@
+// internal/core/ports/mongodb_user.go
+
+package mongodb
+
+import (
+	"context"
+	"erspl/internal/core/domain"
+
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+type MongoDBUserService struct {
+	collection *mongo.Collection
+}
+
+
+func NewMongoDBUserService(collection *mongo.Collection) *MongoDBUserService {
+	return &MongoDBUserService{
+		collection: collection,
+	}
+}
+
+
+func (s *MongoDBUserService) GetUserByID(id int) (domain.User, error) {
+	Your MongoDB query to retrieve a user by ID
+	Example:
+	result := s.collection.FindOne(context.TODO(), bson.M{"_id": id})
+	var user domain.User
+	if err := result.Decode(&user); err != nil {
+	    return domain.User{}, err
+	}
+	return user, nil
+}
+
+// FindByID finds a user by ID from MongoDB
+func (s *MongoDBUserService) FindByID(id uint) (*domain.User, error) {
+	// Your MongoDB query to find a user by ID
+}
+
+// Logout logs out a user in MongoDB
+func (s *MongoDBUserService) Logout(ctx context.Context, phone string) error {
+	// Your MongoDB logout logic
+}

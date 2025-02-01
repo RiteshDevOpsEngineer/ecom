@@ -1,0 +1,71 @@
+package example
+
+import (
+	"fmt"
+)
+
+type Auth interface {
+	Login(username, password string) (bool, error)
+	Logout(username string) error
+	Verify(token string) (bool, error)
+}
+
+type AuthService struct {
+	loggedInUsers map[string]bool
+}
+
+func NewAuthService() *AuthService {
+	return &AuthService{
+		loggedInUsers: make(map[string]bool),
+	}
+}
+
+func (a *AuthService) Login(username, password string) (bool, error) {
+
+	if username == "user" && password == "password" {
+		a.loggedInUsers[username] = true
+		return true, nil
+	}
+	return false, fmt.Errorf("invalid username or password")
+}
+
+func (a *AuthService) Logout(username string) error {
+
+	delete(a.loggedInUsers, username)
+	return nil
+}
+
+func (a *AuthService) Verify(token string) (bool, error) {
+
+	_, loggedIn := a.loggedInUsers[token]
+	return loggedIn, nil
+}
+
+func main() {
+	authService := NewAuthService()
+
+	loggedIn, err := authService.Login("user", "password")
+	if err != nil {
+		fmt.Println("Error:", err)
+	} else if loggedIn {
+		fmt.Println("Login successful")
+	} else {
+		fmt.Println("Login failed")
+	}
+
+	loggedIn, _ = authService.Verify("user")
+	if loggedIn {
+		fmt.Println("User is logged in")
+	} else {
+		fmt.Println("User is not logged in")
+	}
+
+	authService.Logout("user")
+
+	loggedIn, _ = authService.Verify("user")
+	if loggedIn {
+		fmt.Println("User is logged in")
+	} else {
+		fmt.Println("User is not logged in")
+	}
+}

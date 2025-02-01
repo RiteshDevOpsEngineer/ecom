@@ -1,0 +1,62 @@
+# Application settings
+APP_NAME: ERSPL
+APP_ENV: development
+MAINTENANCE_MODE: false
+
+# Token settings
+TOKEN_DURATION: 3600s
+
+# Redis settings
+REDIS_ADDR: localhost:6379
+REDIS_PASSWORD: your_redis_password
+
+# Database settings
+DB_CONNECTION: mysql
+DB_HOST: localhost
+DB_PORT: 3306
+DB_USER: root
+DB_PASSWORD: 
+DB_NAME: erspl
+
+# MongoDB settings
+MONGODB_CONNECTION_URI: mongodb://localhost:2017
+
+JWT_SECRET_KEY: 3UWeyW_iLMaBkbTBtMu7YXguggWOLxq8zQTvCdeSKB4
+
+# Kafka settings
+KAFKA_BROKER: localhost:9092
+
+# HTTP server settings
+HTTP_URL: http://localhost
+HTTP_PORT: 8080
+HTTP_ALLOWED_ORIGINS: "*"
+
+# Additional settings (example for Paytm payment gateway)
+PAYTM_MID: your_paytm_mid
+PAYTM_MERCHANT_KEY: your_paytm_merchant_key
+PAYTM_WEBSITE: your_paytm_website
+PAYTM_CHANNEL_ID: your_paytm_channel_id
+PAYTM_INDUSTRY_TYPE_ID: your_paytm_industry_type_id
+PAYTM_CALLBACK_URL: http://localhost:8080/paytm/callback
+
+# Logging settings
+LOG_LEVEL: debug
+
+# SMTP settings (example for email service)
+SMTP_HOST: smtp.example.com
+SMTP_PORT: 587
+SMTP_USER: your_smtp_user
+SMTP_PASSWORD: your_smtp_password
+SMTP_FROM_EMAIL: your_email@example.com
+
+# Timezone setting
+TIMEZONE: Asia/Kolkata
+
+# OAuth settings (example for Google OAuth)
+GOOGLE_CLIENT_ID: your_google_client_id
+GOOGLE_CLIENT_SECRET: your_google_client_secret
+GOOGLE_REDIRECT_URL: http://localhost:8080/auth/google/callback
+
+# Additional custom settings
+CUSTOM_SETTING_1: value1
+CUSTOM_SETTING_2: value2
