@@ -4,8 +4,8 @@ package middleware
 import (
 	"net/http"
 
-	"erspl/config"
-	"erspl/internal/core/domain"
+	"github.com/RiteshDevOpsEngineer/ecom/config"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
 
 	"github.com/gin-gonic/gin"
 )

@@ -4,7 +4,8 @@ package ports
 
 import (
 	"context"
-	"erspl/internal/core/domain"
+
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
 )
 
 // UserService defines the interface for user-related operations

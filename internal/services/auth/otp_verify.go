@@ -11,8 +11,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"erspl/internal/core/domain"
-	"erspl/internal/utils"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/utils"
 )
 
 func OtpVerify(redisClient *redis.Client, jwtSecret []byte, mongoClient *mongo.Client, dbName, userCollection string) gin.HandlerFunc {

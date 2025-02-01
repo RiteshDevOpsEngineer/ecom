@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"erspl/config"
+	"github.com/RiteshDevOpsEngineer/ecom/config"
 
 	_ "github.com/go-sql-driver/mysql"
 )

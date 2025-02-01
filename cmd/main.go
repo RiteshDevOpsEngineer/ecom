@@ -1,10 +1,10 @@
 package main
 
 import (
-	"erspl/config"
-	"erspl/internal/adapters/database"
-	"erspl/internal/middleware"
-	"erspl/internal/routes"
+	"github.com/RiteshDevOpsEngineer/ecom/config"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/adapters/database"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/middleware"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/routes"
 
 	"log"
 

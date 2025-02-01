@@ -1,4 +1,4 @@
-module erspl
+module github.com/RiteshDevOpsEngineer/ecom
 
 go 1.22.3
 

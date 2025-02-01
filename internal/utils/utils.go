@@ -2,11 +2,12 @@
 package utils
 
 import (
-	"erspl/internal/core/domain"
 	"fmt"
 	"math/rand"
 	"regexp"
 	"time"
+
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
 )
 
 func GenerateOTP() string {

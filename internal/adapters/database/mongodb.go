@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"erspl/config"
+	"github.com/RiteshDevOpsEngineer/ecom/config"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

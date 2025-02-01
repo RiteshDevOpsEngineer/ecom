@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"erspl/internal/adapters/repository/redis"
-	"erspl/internal/core/domain"
-	"erspl/internal/utils"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/adapters/repository/redis"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/utils"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
@@ -79,7 +79,7 @@ func Login(mongoClient *mongo.Client, jwtSecret []byte, dbName, userCollection s
 		redisClient := redis.NewGoRedisClient()
 		redisClient.Set(context.Background(), mobile, user.OTP, domain.OTPExpireTime)
 
-		message := fmt.Sprintf("Welcome to eRSPL! Use OTP %s to verify your account. Regards, eRSPL", user.OTP)
+		message := fmt.Sprintf("Welcome to github.com/RiteshDevOpsEngineer/ecom! Use OTP %s to verify your account. Regards, github.com/RiteshDevOpsEngineer/ecom", user.OTP)
 		err = utils.SendSMS(mobile, message)
 		if err != nil {
 			utils.NewResponse(http.StatusInternalServerError, "false", "Failed to send OTP", nil).Send(c)

@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"erspl/internal/utils"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/utils"
 )
 
 func Logout(redisClient *redis.Client, mongoClient *mongo.Client) gin.HandlerFunc {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"erspl/internal/adapters/database"
-	"erspl/internal/core/ports"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/adapters/database"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/ports"
 )
 
 type GoRedisClient struct{}

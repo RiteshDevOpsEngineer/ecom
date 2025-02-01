@@ -1,5 +1,5 @@
 # Application settings
-APP_NAME: ERSPL
+APP_NAME: ECOM
 APP_ENV: development
 MAINTENANCE_MODE: false
 
@@ -16,7 +16,7 @@ DB_HOST: localhost
 DB_PORT: 3306
 DB_USER: root
 DB_PASSWORD: 
-DB_NAME: erspl
+DB_NAME: ecom
 
 # MongoDB settings
 MONGODB_CONNECTION_URI: mongodb://localhost:2017

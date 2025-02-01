@@ -2,12 +2,13 @@ package middleware
 
 import (
 	"context"
-	"erspl/config"
-	"erspl/internal/core/domain"
-	"erspl/internal/utils"
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/RiteshDevOpsEngineer/ecom/config"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
+	"github.com/RiteshDevOpsEngineer/ecom/internal/utils"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
@@ -45,7 +46,7 @@ func AuthMiddleware(redisClient *redis.Client, mongoClient *mongo.Client) gin.Ha
 		// Check if the token exists in Redis
 		_, err = redisClient.Get(context.Background(), claims.Phone).Result()
 		if err != nil {
-			dbName := "erspl"
+			dbName := "github.com/RiteshDevOpsEngineer/ecom"
 			CollectionName := "users"
 			userCollection := mongoClient.Database(dbName).Collection(CollectionName)
 
@@ -78,9 +79,9 @@ func AuthMiddleware(redisClient *redis.Client, mongoClient *mongo.Client) gin.Ha
 
 // import (
 // 	"context"
-// 	"erspl/config"
-// 	"erspl/internal/core/domain"
-// 	"erspl/internal/utils"
+// 	"github.com/RiteshDevOpsEngineer/ecom/config"
+// 	"github.com/RiteshDevOpsEngineer/ecom/internal/core/domain"
+// 	"github.com/RiteshDevOpsEngineer/ecom/internal/utils"
 // 	"fmt"
 // 	"net/http"
 
